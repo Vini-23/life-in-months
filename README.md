@@ -3,6 +3,8 @@
 **Life in Months** é uma aplicação visual que ajuda você a entender como o seu tempo de vida é distribuído.  
 Com base na sua idade e nas atividades do seu dia-a-dia, o app calcula quantos meses da sua vida tendem a ser gastos em cada atividade.
 
+Link do site: [life-in-months](https://vini-23.github.io/life-in-months/)
+
 ---
 
 ## 🧠 Como funciona

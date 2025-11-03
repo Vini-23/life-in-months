@@ -243,7 +243,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const others = document.createElement("div");
         others.className = "legend-item";
-        others.innerHTML = `<div class='legend-color' style='background-color: #e0e0e0;'></div> Others: ${emptyMonths}`;
+        others.innerHTML = `<div class='legend-color' style='background-color: #e0e0e0;'></div> Free: ${emptyMonths}`;
         legend.appendChild(others);
     }
 
@@ -267,7 +267,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const colors = activities.map(act => act.color);
 
         if (emptyMonths > 0) {
-            labels.push(`Others: ${emptyPercent}%`);
+            labels.push(`Free: ${emptyPercent.toFixed(2)}%`);
             dataValues.push(Math.round((emptyMonths / monthsLeft * 100) * 100) / 100);
             colors.push("#e0e0e0");
         }

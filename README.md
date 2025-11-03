@@ -31,7 +31,7 @@ Link do site: [life-in-months](https://vini-23.github.io/life-in-months/)
 - Legenda automática mostrando:
   - Meses vividos
   - Meses por atividade
-  - Meses não atribuídos (`Others`)
+  - Meses não atribuídos (`Free`)
 
 ---
 

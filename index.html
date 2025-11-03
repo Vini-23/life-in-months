@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life in Months</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <div class="inputs">
+                <div>
+                    <h1>Life in Months</h2>
+                    <p>
+                        Life in Months is a minimalist web application that helps you visualize how you spend your time.
+                    </p>
+                    <p>
+                        By entering your age and how you spend your time daily, weekly or monthly on your activities, it shows you how much time they will consume until the end of your life.
+                    </p>
+                    <p>
+                        The life expectancy used is 90 years.
+                    </p>
+                </div>
+                <hr>
+
+                <div class="view-switch">
+                    <button id="gridViewBtn" class="view-btm active">▦</button>
+                    <button id="pieViewBtn" class="view-btm">◔</button>
+                </div>
+                <hr>
+
+                <div class="birth-input">
+                    <label for="birthday">Birthday:</label>
+                    <input type="date" id="birthday" class="birthday" required>
+                </div>
+                
+                <div class="activities" id="activities">
+                    <div class="activity">
+                        <input type="text" placeholder="Name" value="Sleep" required>
+                        <input type="number" placeholder="Day" min="0" max="24">
+                        <input type="number" placeholder="Week" min="0" max="168">
+                        <input type="number" placeholder="Month" min="0" max="720">
+                        <input type="color" value="#a8c8ff">
+                        <button class="remove-btn">↺</button>
+                    </div>
+                </div>
+                
+                <button class="add-btn" id="addActivity">+ Add activity</button>
+                <button class="calc-btn" id="calcBtn">Calculate</button>
+            </div>
+
+            <div class="visualization">
+                <div id="gridView" class="view">
+                    <div class="grid">
+                        <h2 class="graf-title hidden" id="gridTitle">Months spent in each activity</h2>
+                        <div class="months" id="monthsGrid"></div>
+                        <div class="legend" id="legend"></div>
+                    </div>
+                </div>
+                
+                <div id="pieView" class="view hidden">
+                    <h2 class="graf-title hidden" id="pieTitle">Percentage of life spent per activity</h2>
+                    <canvas id="pieChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/script.js"></script>
+</body>
+</html>

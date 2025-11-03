@@ -1,0 +1,250 @@
+/* Configs gerais */
+html {
+    height: 100vh;
+    width: 100vw;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(45deg, hsla(217, 100%, 50%, 1) 0%, hsla(296, 100%, 61%, 1) 50%, hsla(186, 100%, 69%, 1) 100%);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #f1f1f1;
+}
+
+h2 {
+    text-align: center;
+    color: #f1f1f1;
+}
+
+p {
+    text-align: justify;
+    color: #cfcfcf;
+    max-width: 700px;
+    margin: 0 auto 8px;
+    font-size: 15px;
+}
+
+hr {
+    margin: 10px 0;
+}
+
+label {
+    display: block;
+    margin-bottom: 4px;
+    font-weight: 500;
+    color: #f1f1f1;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="color"],
+input[type="date"] {
+    padding: 6px;
+    border-radius: 6px;
+    border: 1px solid #5a5a5a;
+    background: #4a4a4a;
+    color: #f1f1f1;
+    width: 100%;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    padding: 6px 10px;
+    border-radius: 6px;
+}
+
+/* Ajustes para box-sizing e flexbox */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Página */
+.container {
+    max-width: 1300px;
+    min-height: 728px;
+    width: 100%;
+    background: #3a3a3a;
+    margin: 30px;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+}
+
+.content {
+    display: flex;
+    gap: 40px;
+}
+
+/* Inputs */
+.inputs {
+    flex: 1;
+}
+
+.birthday {
+    margin-bottom: 20px;
+}
+.birth-input {
+    display: flex;
+    align-items: baseline;
+    gap: 5px;
+}
+
+.activities {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.activity {
+    display: grid;
+    grid-template-columns: 1fr 60px 60px 60px 40px 40px;
+    align-items: center;
+    gap: 5px;
+}
+
+.activity input[type="text"] {
+    font-weight: 500;
+}
+
+/* Botões */
+.add-btn {
+    margin-top: 10px;
+    background: #007bff;
+    color: white;
+}
+
+.remove-btn {
+    background: #ff6b6b;
+    color: white;
+}
+
+.calc-btn {
+    margin-top: 15px;
+    width: 100%;
+    background: #28a745;
+    color: white;
+    font-weight: 600;
+}
+
+/* Grade de resultado */
+.grid {
+    flex: 1.5;
+}
+
+.grid-title {
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.months {
+    display: grid;
+    grid-template-columns: repeat(36, 14px);
+    gap: 5px;
+    justify-content: center;
+}
+
+.month {
+    width: 14px;
+    height: 14px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    color: #333;
+}
+
+.legend {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 13px;
+    color: #f1f1f1;
+}
+
+.legend-color {
+    width: 14px;
+    height: 14px;
+    border-radius: 3px;
+}
+
+.legend-color.lived-color {
+    position: relative;
+    background: #b0b0b0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.legend-color.lived-color::after {
+    content: "•";
+    font-size: 15px;
+    color: #333;
+    position: relative;
+    z-index: 1;
+}
+
+/* Abas dos gráficos */
+.visualization {
+    flex: 1.5;
+    position: relative;
+}
+
+.view-switch {
+    display: flex;
+    justify-content: space-between;
+}
+
+.view-switch button {
+    background: #2f2f2f;
+    border: none;
+    color: #f1f1f1;
+    font-size: 18px;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.view-switch button.active {
+    background: #4a8cff;
+}
+.view-btm {
+    width: 49%;
+}
+
+.view {
+    display: block;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Gráficos */
+#pieChart {
+    width: 500px;
+    height: 500px;
+    margin: 60px auto 0;
+    display: block;
+}
